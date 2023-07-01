@@ -9,12 +9,14 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
-
+/*
+    v1 의 controller들을 하나로 통합!!
+ */
 @Controller
 @RequestMapping("/springmvc/v2/members")
 public class SpringMemberControllerV2 {
 
-    private MemberRepository memberRepository = MemberRepository.getInstance();
+    private final MemberRepository memberRepository = MemberRepository.getInstance();
 
     @RequestMapping("/new-form")
     public ModelAndView newForm() {
